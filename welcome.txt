@@ -1,6 +1,9 @@
 This is welcome file using git.
 I would like to update the file here.
+Marikannan R
+Technical Consultant
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 1234567890
-Marikannan R
-Technical Consultan
+
+
+
