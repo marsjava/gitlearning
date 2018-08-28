@@ -1,0 +1,873 @@
+ Database
+---------------
+>A collection of logically realated data.
+>It is used to search data to answer queries.
+>A database may be designed for batch processing, real time processing, or online processing.
+
+Database Management System
+----------------------------
+>> It is set of software or programs that enables storing, modifying and extracting info. from the database.
+>> It also provide users with tools add, delete, access, modify and analyze data stored in one location.
+>> A group can access the data by using query and reporting tools that are part of the DBMS, or by using application programs specifically written to access the data.
+
+Data Models
+----------------
+A data model is a representation of a real world situation about which data is to be collected and stored in a database.
+A data model depicts the dataflow and logical interrelationship amoung different data elements.
+
+Types of Data Models
+--------------------------
+1.Object based logical models
+  >> The E-R Model
+2.Record based logical models
+  >> The Relational Model
+  >> The Network Model
+  >> The Hierarchical Model
+
+The E-R Model
+---------------------
+>> It is based on perception of the world as a collection of basic objects(entities) and relationships among these objects.
+e.g.	Employee--------Project
+
+The Relational Model
+---------------------------
+>> Data and Relationships are represented by a collection of tables.
+>> Each table has a number of columns with unique names.
+e.g. Employee
+     Project
+
+The Network Model
+-------------------------
+>>Data are represented by collection of records.
+>>Relationships among data are represented by links.
+>>Organization is that of an arbitrary graph.
+
+The Hierarchical Model
+----------------------------
+>> It is similar to Network model.
+>> Organization of the records is like collection of trees, rather than arbitrary graphs.
+>> The DBMS systems are of different type. we are going to refer to RDBMS throught this session
+
+RDBMS
+-----------------------
+>> It is database management system that is based on Relational model.
+
+Functional Dependency
+
+ProjectCode, EmployeNo, DepartmentNo -> Primarykey
+create database bank;
+
+use bank;
+
+create user hexa identified by 'pass@123';
+
+grant create on *.* to 'hexa';
+
+
+
+Integrity Constraints			13/8/2018
+------------------------------------------------------
+
+1. Not null
+
+step1:
+
+constraint constraint-name contraint-type
+constraint nn_empname not null
+not null
+
+2. unique
+
+constraint uq_mobileno unique
+
+3. Not null+unique = Primary key
+
+constraint pk_empid primary key
+
+
+ create table t1(
+empid int, 
+empname varchar(20) not null,
+mobile varchar(20),
+desig varchar(20),
+constraint pk_id_mobile primary key(empid,mobile));
+
+4. Foreign key 
+
+t1				t2
+primary key/unique c1<----------c1	
+
+constraint contraint-name references ref.Tablename(ref.column-name)
+
+create table t2(
+id int,
+eid int,
+c1 varchar(20),
+c2 varchar(30),
+ constraint pk_id primary key(id),
+ constraint fk_empid foreign key(eid) references t1(empid));
+
+
+5. check 
+
+constraint ck_empid check(empid between 10000 and 20000)
+constraint ck_salary check(salary>10000)
+
+3. customers
+------------------
+customerid	int			primary key
+customername	varchar		50	not null
+contactno	varchar		20	not null
+address1	varchar		100	not null
+address2	varchar		100	
+city		varchar		20	
+state		varchar		20
+postalcode	varchar		20	
+country		varchar		20
+salesRepId	int			foreign key
+					(employee-empid)
+creaditlimit	double
+
+4. Orders
+-------------
+ordernumber	int			primary key
+orderdate	datetime		
+requireddate	datetime	
+shippeddate	datetime
+orderstatus	varchar		20	not null
+comments	text		
+customerno	int			foreign key
+					customer-id
+5. Payments
+--------------------
+customerno	int		composite primary key
+chequeno	int		[customerno+chequeno]
+paymentdate	datetime
+amount		double
+
+alter table payments add constraint fk_cust_no foreign key(customerno) references customers(customerid);
+
+6. Products
+--------------------
+productcode	varchar		15	primary key
+productname	varchar		30	
+productline	varchar		20
+productscale	varchar		30
+productvendor	varchar		50
+description	varchar		200
+quantityInStock	int
+buyprice	double
+msrp		double	
+
+7. ProductLines
+---------------------------
+productLine	varchar		20	primary key
+textdescription	text
+htmldescription	text	
+image		blob
+
+alter table products add constraint fk_prodline foreign key(productline) references productlines(productline)
+
+
+8. OrderDetails
+-----------------------------
+ordernumber	int		composite primary key
+prodcutcode	varchar		15     [orderno+prodcode]	
+quantityordered	int
+priceeach	double
+orderlineno	smallint
+				Foreign key
+				orders - orderno
+				products - productno
+
+SQL Operators & Functions		14/8/2018
+------------------------------------------------------
+Arithmetic + - * / 
+Comparision > >= < <= = != <>
+1. between and 
+2. in
+3. like
+4. null
+5. exits
+6. all
+7. some|any
+
+Logical operator
+and
+or
+not
+
+Set
+Union, Union all, Intersect & minus
+
+customer		offices
+country | state		country	| state
+
+India  Tamilnadu	India     Tamilnadu
+India  Kerla	        India     Delhi
+USA    Newyork	        USA	  Newjersey
+UK     London           
+
+
+SQL Functions:
+-----------------
+1. Aggregate functions
+
+a. count
+b. sum
+c. min
+d. max
+e. avg
+
+2. Scalar functions
+2.1. String functios
+2.2. Numeric functions
+2.3. Date and time functions
+2.4. Case and Cast
+
+String functions:
+
+1. upper 
+2. lower 
+3. concat
+4. substring
+5. trim
+
+Numeric function:
+
+1. abs
+2. ceil
+3. floor
+4. mod
+5. pi
+6. power
+7. round
+8. sqrt
+9. square
+10. trunc or truncate
+
+Miscellaneous function:
+
+1. coalsec
+2. nullif
+
+select coalsec(c1, 'n/a') from dual;
+
+Control flow Function:
+
+if then else ...
+
+
+syntax:
+
+case value when compare-value then result, 
+	   when compare-value then result,
+	   ....
+           ....
+	   else result end
+
+Clauses in SQL			16/08/2018
+------------------------------------------------
+group by
+having
+order by
+
+create table empinfo
+
+
+empid		int			primary key
+empname 	varchar(30) 		not null,
+
+department 	varchar(30)
+salary 		int
+city 		varchar(30)
+
+tax 		int
+
+insert values
+
+
+1101	Ramesh	Admin	2300	Chennai		100
+
+1102	Ram	NSS	1300	Bangaluru	120
+
+1103	Vijay	Admin	2300	Delhi		230
+
+1104	Shiva	NSS	1300	Hyderabad	140
+
+1105	Ragu	IT	2300	Hyderabad	320
+
+1106	John	IT	1300	Bangaluru	190
+
+Group by clause
+This clause is used in a select statement where aggregate function are used one of the select field.
+This is used to group the results by one or more columns specified in the select field.
+syntax:
+	SELECT column1, column2, aggregate-func(expr)
+	FROM table-name
+	WHERE condition
+	GROUP BY column1, column2
+	HAVING condition
+	ORDER BY column1 ASC|DESC, column2 ASC|DESC;
+
+1. Group by with one select field
+2. Group by with one column and two aggregate function
+3. Group by with where clause
+4. Group by with two columns and one aggregate function
+5. Group by using Having clause
+6. Using Having clause & where clause
+
+Order by clause:
+The ORDER BY clause are used for sorting the data based on the column specified.
+
+1. Order by
+2. Order by with two fields
+
+
+
+SQL Join			17/08/2018	
+---------------------------------------------------
+using table offices & employee
+
+select t1.c1, t1.c2, t2.c1, t2.c3 from t1, t2 where
+t1.c1=t2.c2;
+
+
+select t1.c1, t1.c2, t2.c1, t2.c3 from t1 inner join t2 on t1.c1>t2.c2;
+
+To Build the Maven Project
+---------------------------------------------
+1. console based appl. 
+groupId			com.varsity
+artifactId		learnjava
+archetypeArtifactId	archetype-maven-quickstart
+version
+
+mvn archetype:generate -DgroupId=com.varsity -DartifactId=learnjava -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn exec:java -Dexec.mainClass=com.varsity.App
+
+2. web based appl. 
+groupId			com.varsity
+artifactId		learnwebjava
+archetypeArtifactId	archetype-maven-webapp
+version
+
+
+Encapsulation:
+------------------
+It is the protective barrier that prevents the data in a a class from being directly accessed by the code outside the class.
+
+Access to the data and code is tightly controlled by using an interface.
+
+The fields in class are made private so that cannot be accessed by anyone outside the class.
+
+Data Hiding.
+
+The fields can be accessed only by the public methods.
+1. Accessor	getter
+2. Mutator	setter
+
+Class Name: Product/ProductMain/ProductDetails
+Variable/Method: 
+employeeId
+address1
+getMessage
+
+java.lang
+java.io
+
+
+class A{
+ private int id;
+ private String name;
+ public int getId(){
+   return id;
+ }
+ public void setId(int id){
+   this.id = id;
+ }
+ public String getName(){
+   return name;
+ }
+ public void setName(String name){
+   this.name = name;
+ }  
+}
+Facebook
+  name		String
+  age		int
+  maritalStatus	String
+
+  public String toString(){
+     return "Facebook Value: "+name+" Age "+age+" Status "+maritalStatus;
+  }
+
+
+class Test{
+  int x = 5;
+  static int y = 12;
+  void display(){
+    x+=10;
+    y++;
+    System.out.println("x value is "+x+" y value is "+y);
+  }
+  static void printValue(){
+    System.out.println("Hi, this is static method in Test class")
+  }
+}
+class TestMain{
+ public static void main(String[] args){
+   Test obj1 = new Test();
+   obj1.display();
+   Test obj2 = new Test();
+   obj2.display();
+   Test obj3 = new Test();
+   obj3.display();
+   obj1.display();
+ }
+}
+class Box{
+ int id;
+ static String name;
+ public void printData(){
+   System.out.println("Accept both static&non-static");
+   System.out.println(id+" "+name);
+ }
+ public static void printMessage(){
+   System.out.println("Hi, I'm static method.");
+   System.out.println(name);
+   //If you are try id, getting an compilation error.
+ }
+ public static void main(String[] args){
+   name="Toys Box";
+   Box obj = new Box();
+   obj.id=1201;
+   obj.printData();
+   printMessage();
+   Test t1 = new Test();
+   t1.display();
+   Test.printValue(); 
+ }
+}
+
+Exception Handling
+------------------------------------
+
+mvnrepository.com
+
+Primitive	java.lang
+------------------------------------
+boolean		Boolean.java
+byte		Byte.java
+short		Short.java
+int		Integer.java
+long		Long.java
+float		Float.java
+double		Double.java
+char		Character.java
+
+Auto-Boxing
+---------------------
+String name = "Ram";
+String name = new String("Ram");
+
+
+java.util				java.time
+-----------------------------------------------------
+Date(class)				LocalDate
+Calendar(Abstract)			DateTimeFormatter
+					LocalDateTime
+
+java.text
+------------------------------------------------------
+SimpleDateFormat
+
+d-date
+M-month
+y-year
+
+h-hour(12hrs)
+H-hour(24hrs)
+m-minutes
+s-seconds
+
+a-am/pm
+E-day
+
+Scanner
+
+boolean 	nextBoolean()
+byte		nextByte
+short		nextShort
+int		nextInt
+long		nextLong
+float		nextFloat
+double		nextDouble
+
+
+String		next			
+String		nextLine()
+
+
+int age = Integer.parseInt(scan.next());
+String name = scan.nextLine();
+float salary = Float.parseFloat(scan.next());
+
+Throwable 
+Exception					Error
+|_IOException
+|_SQLException
+|_ClassNotFoundException
+|_InterruptedException
+|_ParseException
+|_RunTimeException
+  |_ArithmeticException
+  |_NullPointerException
+  |_NumberFormatException
+  |_IndexOutOfBoundException
+    |_ArrayIndexOutOfBoundException
+    |_StringIndexOutOfBoundException
+
+http://zetcode.com/db/jdbi/
+
+varargs
+--------
+
+class A{
+ void m1(int a, int b,String... args){} 
+}
+
+A obj = new A();
+obj.m1("single");
+obj.m1("single","double");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date today = new Date();
+System.out.println(today);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
