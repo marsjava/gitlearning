@@ -1,0 +1,162 @@
+/* table {
+    border-collapse: collapse       
+}
+
+td {
+   border: 1px solid #000000
+}
+
+.table {
+    max-width: 9450px;
+    margin: 10px auto;
+  }
+
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  thead th {
+    font-weight: 400;
+    background: #8a97a0;
+    color: #FFF;
+  }
+
+  tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 5px;
+  }
+
+  tr:nth-child(even) {
+    background: #e8eeef;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 20px;
+    font-weight: 300;
+  }
+  td{
+    background: #8a97a0;
+    color: #FFF;
+    text-align: center;
+  } */
+
+  /* *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+  
+  table {
+    max-width: 960px;
+    margin: 10px auto;
+  }
+  
+  caption {
+    font-size: 1.6em;
+    font-weight: 400;
+    padding: 10px 0;
+  }
+  
+  thead th {
+    font-weight: 400;
+    background: #8a97a0;
+    color: #FFF;
+  }
+  
+  tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 5px;
+  }
+  
+  tr:nth-child(even) {
+    background: #e8eeef;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 20px;
+    font-weight: 300;
+  }
+  #sai {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    cursor: pointer;
+    bottom:50;
+}
+   */
+   @import url(https://fonts.googleapis.com/css?family=Passion+One);
+   *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /* tbody {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+   */
+  table {
+    max-width: 9450px;
+    margin: 10px auto;
+  }
+  
+  caption {
+    font-size: 1.6em;
+    font-weight: 400;
+    padding: 10px 0;
+  }
+  
+  /* thead th {
+    font-weight: 400;
+    background: #8a97a0;
+    color: #FFF;
+  } */
+  
+  tr {
+    
+    background: #ced2d3;
+    border-bottom: 1px solid rgb(7, 2, 2);
+    margin-bottom: 5px;
+    font-family: 'Passion One';
+    font-size: large;
+    
+  }
+  
+  tr:nth-child(even) {
+    background: #e8eeef;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 20px;
+    font-weight: 300;
+  }
+ 
+.tr1 {
+  background: #f4f7f8;
+  border-bottom: 1px solid rgb(5, 0, 0);
+  margin-bottom: 5px;
+  font-size: large;
+}
+.th1{
+  background: #b1d6eb;
+  border-bottom: 1px solid rgb(10, 0, 0);
+  margin-bottom: 5px;
+  font-family: 'Passion One';
+  font-size: large;
+}

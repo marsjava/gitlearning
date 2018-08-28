@@ -1,0 +1,25 @@
+<div id="bg" class="container">
+    <header style="text-align:center;font:bold;color:white;"><b>
+      APPROVAL/DENIAL-SECTION
+    </b></header>
+    <div class="name">
+        <b><input class="first" type="text" placeholder =" Employee ID:  {{employeeId}}" readonly></b>
+        <b><input class="last" type="text" placeholder =" Leave ID:   {{leaveid}}" readonly></b>
+        <b><input class="email" type="text" placeholder =" Employee Name:  {{name}}" readonly></b>
+        <b><input class="first" type="text" placeholder =" Start Date:  {{startdate}}" readonly></b>
+        <b><input class="last" type="text" placeholder =" End Date:   {{enddate}}" readonly></b>
+        <b> <input class="first" type="text" placeholder =" Leave Balance:  {{leaves}}" readonly></b>
+        <b><input class="last" type="text" placeholder =" No of Days:  {{days}}" readonly></b>
+        <b><input class="email" type="text" placeholder =" Leave Type :  {{type}}" readonly></b>
+        <b><input class="email" type="text" placeholder =" Leave Reason:  {{reason}}" readonly></b><br><br>
+        <b>Comments:</b> <input class="form-control" type="text" placeholder="Please enter your comments" name="comments" [(ngModel)]= "managerComments" required>
+      </div>
+        <style>
+              .form-control:after { content:" *"; }
+          </style>​
+          <footer>
+              <button  style=margin:5px type="submit" class="btn btn-primary" (click)="onback()">Back</button>
+              <button  style=margin:5px type="submit" class="btn btn-primary" value="Approve/deny" (click)="ondeny()" [disabled]="managerCommentsEnable()">Deny</button>  
+              <button  style=margin:5px type="submit" class="btn btn-primary" value="Approve/deny" (click)="onapprove()" [disabled]="managerCommentsEnable()">Approve</button>
+        </footer>
+  </div>

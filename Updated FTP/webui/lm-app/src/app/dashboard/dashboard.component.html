@@ -1,0 +1,32 @@
+
+<div style="text-align:center">
+  <div class="bg">
+    <div class="container-fluid">
+      <div class="row">
+      
+        <div class="col-sm-3 col-md-6 bg-danger" id="myDetails">
+        <div style="text-align:center" ><button class="button1" (click)="ondetails()"> My Details Section</button><br/></div>
+        </div>
+        
+        <div class="col-sm-9 col-md-6 " id="myLeave">
+          <div style="text-align:center" ><button class="button3" (click)="onhistory()" > My Leave Application Section</button><br/></div>
+         </div>
+        
+         <div class="col-sm-9 col-md-6 " id="mypending">
+          <div style="text-align:center" ><button class="button5" (click)="onpending()">My Pending Leaves</button><br/></div>
+         </div>
+
+        <div class="col-sm-9 col-md-6 bg-success" id="myManager">
+        <div style="text-align:center" ><button class="button2" (click)="onmanager(employee.managerId)"> My Manager Details Section</button><br/></div>
+        
+        </div>
+       
+        <div class="col-sm-3 col-md-6 bg-info" id="myReport">
+          <div style="text-align:center" ><button class="button4" (click)="onstatus()" > My Reporting Employee's Pending Leave Application Section</button><br/></div>
+        </div> 
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    </div>
+    </div>
+    

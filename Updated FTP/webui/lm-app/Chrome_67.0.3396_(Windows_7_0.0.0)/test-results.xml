@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 67.0.3396 (Windows 7 0.0.0)" package="" timestamp="2018-08-01T11:23:25" id="0" hostname="EBHVR18-20" tests="31" errors="0" failures="2" time="7.804">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should create the app" time="2.686" classname="Chrome_67_0_3396_(Windows_7_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should have as title 'Leave Management System'" time="0.082" classname="Chrome_67_0_3396_(Windows_7_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should render title in a h1 tag" time="0.049" classname="Chrome_67_0_3396_(Windows_7_0_0_0).AppComponent"/>
+  <testcase name="ApproveDenyComponent should compare employee Details" time="0.084" classname="Chrome_67_0_3396_(Windows_7_0_0_0).ApproveDenyComponent"/>
+  <testcase name="ApproveDenyComponent should compare leave Details" time="0.083" classname="Chrome_67_0_3396_(Windows_7_0_0_0).ApproveDenyComponent"/>
+  <testcase name="ApproveDenyComponent should be created" time="0.083" classname="Chrome_67_0_3396_(Windows_7_0_0_0).ApproveDenyComponent"/>
+  <testcase name="DashboardComponent should compare employee Details" time="0.064" classname="Chrome_67_0_3396_(Windows_7_0_0_0).DashboardComponent"/>
+  <testcase name="DashboardComponent should be created" time="0.068" classname="Chrome_67_0_3396_(Windows_7_0_0_0).DashboardComponent"/>
+  <testcase name="Employee Details Service Employee Details Service(with spies) should be created" time="0.009" classname="Chrome_67_0_3396_(Windows_7_0_0_0).Employee Details Service"/>
+  <testcase name="Employee Details Service LeaveHistory should compare EmployeeDetails by Id " time="0.015" classname="Chrome_67_0_3396_(Windows_7_0_0_0).Employee Details Service"/>
+  <testcase name="EmployeeComponent should render one employee record" time="0.108" classname="Chrome_67_0_3396_(Windows_7_0_0_0).EmployeeComponent"/>
+  <testcase name="EmployeeComponent should be created" time="0.045" classname="Chrome_67_0_3396_(Windows_7_0_0_0).EmployeeComponent"/>
+  <testcase name="LeaveApplyComponent should compare employee Details" time="1.271" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveApplyComponent"/>
+  <testcase name="LeaveApplyComponent should be created" time="0.131" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveApplyComponent"/>
+  <testcase name="LeaveDetailsService LeaveDetailsService (with spies) should be created" time="0.011" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveDetailsService"/>
+  <testcase name="LeaveDetailsService LeaveDetails Service check should compare leaveHistory " time="0.017" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveDetailsService"/>
+  <testcase name="LeaveDetailsService LeaveDetails Service check should compare leavePending " time="0.015" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveDetailsService"/>
+  <testcase name="LeaveDetailsService LeaveDetails Service check should compare leavePending " time="0.012" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveDetailsService"/>
+  <testcase name="LeaveDetailsService LeaveDetails Service check should compare managerLeavePending " time="0.011" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveDetailsService"/>
+  <testcase name="LeaveDetailsService LeaveDetails Service check should compare leaveId " time="0.012" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveDetailsService"/>
+  <testcase name="LeaveHistoryComponent should be created" time="0.073" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveHistoryComponent"/>
+  <testcase name="LeaveHistoryComponent should render one history record" time="0.057" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveHistoryComponent"/>
+  <testcase name="LeaveHistoryComponent should be created" time="0.071" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveHistoryComponent"/>
+  <testcase name="LeaveHistoryComponent should render one pending record" time="0.041" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LeaveHistoryComponent"/>
+  <testcase name="LoginFormComponent should be created" time="0.033" classname="Chrome_67_0_3396_(Windows_7_0_0_0).LoginFormComponent"/>
+  <testcase name="ManagerApprovalComponent should be created" time="0.058" classname="Chrome_67_0_3396_(Windows_7_0_0_0).ManagerApprovalComponent"/>
+  <testcase name="ManagerApprovalComponent should render manager pending record" time="2.442" classname="Chrome_67_0_3396_(Windows_7_0_0_0).ManagerApprovalComponent">
+    <failure type="">Error: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'ng:///DynamicTestModule/ManagerApprovalComponent.ngfactory.js'.
+    at http://localhost:9876/_karma_webpack_/webpack:/C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/zone.js:2955:1
+    at XMLHttpRequest.proto.(anonymous function) [as send] C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/zone.js:1366:1)
+    at Array.&lt;anonymous&gt; (node_modules/source-map-support/browser-source-map-support.js:107:134)
+    at node_modules/source-map-support/browser-source-map-support.js:101:106
+    at Array.&lt;anonymous&gt; (node_modules/source-map-support/browser-source-map-support.js:107:501)
+    at node_modules/source-map-support/browser-source-map-support.js:101:106
+    at a (node_modules/source-map-support/browser-source-map-support.js:101:312)
+    at b (node_modules/source-map-support/browser-source-map-support.js:104:356)
+    at node_modules/source-map-support/browser-source-map-support.js:105:245
+    at Array.map (&lt;anonymous&gt;)
+</failure>
+    <failure type="">Expected object to be a kind of Employee, but was Object({ empId: 1000, empName: 'SAI', empDate: '1997-03-24', managerId: 1000, empPhone: 9912140507, empDept: 'IT', empEmail: 'KETHU.SAIKUMAR@GMAIL.COM', empLeaveAvailable: 12 }).
+    at http://localhost:9876/_karma_webpack_/webpack:/C:/Users/Hvuser/workspace/FTP47/webui/lm-app/src/app/employee.service.spec.ts:74:32
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/zone.js:392:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvoke C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/proxy.js:79:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/zone.js:391:1)
+</failure>
+  </testcase>
+  <testcase name="MydetailsComponent should compare employee Details" time="0.054" classname="Chrome_67_0_3396_(Windows_7_0_0_0).MydetailsComponent"/>
+  <testcase name="MydetailsComponent should be created" time="0.044" classname="Chrome_67_0_3396_(Windows_7_0_0_0).MydetailsComponent"/>
+  <testcase name="MymanagerComponent should compare employee Details" time="0.039" classname="Chrome_67_0_3396_(Windows_7_0_0_0).MymanagerComponent">
+    <failure type="">Expected Function to be 1.
+    at http://localhost:9876/_karma_webpack_/webpack:/C:/Users/Hvuser/workspace/FTP47/webui/lm-app/src/app/mymanager/mymanager.component.spec.ts:43:44
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/zone.js:392:1)
+    at AsyncTestZoneSpec.webpackJsonp.../../../../zone.js/dist/async-test.js.AsyncTestZoneSpec.onInvoke C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/async-test.js:49:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvoke C:/Users/Hvuser/workspace/FTP47/webui/lm-app/node_modules/zone.js/dist/proxy.js:76:1)
+</failure>
+  </testcase>
+  <testcase name="MymanagerComponent should be created" time="0.036" classname="Chrome_67_0_3396_(Windows_7_0_0_0).MymanagerComponent"/>
+  <system-out>
+    <![CDATA[PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeaveId promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'leaveId details', LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeaveId promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'leaveId details', LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getEmployeeDetails called on Employee.service'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeaveId promise resolved : [object Object]'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'leaveId details', LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeaveId promise resolved : [object Object]'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'leaveId details', LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployeeDetails called on Employee.service'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getEmployees promise resolved : 2'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployees promise resolved : 2'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeaveHistory called on LeaveDetails.service'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeavePending called on LeaveDetails.service'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeavePending called on LeaveDetails.service'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getManagerPending called on LeaveDetails.service'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeavePending called on LeaveDetails.service'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeaveHistory called on LeaveDetails.service'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeavePending called on LeaveDetails.service'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeavePending called on LeaveDetails.service'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getManagerPending called on LeaveDetails.service'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeavePending called on LeaveDetails.service'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getLeaveHistory called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeaveHistory promise resolved : 1'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'helloooo', [LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}]
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getLeaveHistory promise resolved : 1'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'helloooo', [LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}]
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployees called on employee.service'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getLeaveHistory called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'All employees', undefined
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeaveHistory promise resolved : 1'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'helloooo', [LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}]
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getLeaveHistory promise resolved : 1'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'helloooo', [LeaveDetails{leaveId: 1, empId: 1000, noOfDays: 2, startDate: '2019-06-24', endDate: '2019-06-25', leaveType: 'EL', leaveStatus: 'PENDING', leaveReason: 'SICK', leaveAppliedDate: '2019-06-21', managerComments: 'APP'}]
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'empId of all', undefined
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getManagerPending promise resolved : 1'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'bjbj', Employee{empId: 1000, empName: 'sai', empDate: '2019-03-24', managerId: 1000, empPhone: 9912140507, empDept: 'IT', empEmail: 'kethu@gmail.com', empLeaveAvailable: 30}
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'Mock getEmployees called'
+,Chrome 67.0.3396 (Windows 7 0.0.0) LOG: 'getEmployeeDetails promise resolved : [object Object]'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) ERROR: 'An error occurred', Response{_body: '<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> Not Found</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.16</h3></body></html>', status: 404, ok: false, statusText: 'OK', headers: Headers{_headers: Map{_t: ..., _i: ..., _f: ..., _l: ..., _s: ...}, _normalizedNames: Map{_t: ..., _i: ..., _f: ..., _l: ..., _s: ...}}, type: 2, url: 'http://localhost:8080/ftp47/api/leave/2/leaveid'}
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getEmployees called on employee.service'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Mock getLeavePending called'
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'All employees', undefined
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'empId of all', undefined
+,PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'getManagerPending promise resolved : 1'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
