@@ -1,0 +1,55 @@
+
+<table>
+  <caption>My Pending Leaves</caption>
+  <thead>
+    <tr >
+      <th scope="col">Leave Id</th>
+      <th scope="col">Employee Id</th>
+      <th scope="col">Number of Days</th>
+      <th scope="col">Start Date </th>
+      <th scope="col">End Date </th>
+      <th scope="col">Leave Type</th>
+      <th scope="col">Leave Status</th>
+      <th scope="col">Leave Reason</th>
+      <th scope="col">Leave Applied Date</th>
+      <th scope="col">Manager Comments</th>
+    </tr>
+  </thead>
+  <tbody class="leavePending">
+    <tr  *ngFor="let employee of leavePending">
+      <td>
+        <h5>{{employee.leaveId}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.empId}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.noOfDays}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.startDate}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.endDate}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.leaveType}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.leaveStatus}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.leaveReason}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.leaveAppliedDate}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.managerComments}}</h5>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div>
+      <button type="submit" class="btn btn-primary" (click)="onback()">Back</button>
+</div>

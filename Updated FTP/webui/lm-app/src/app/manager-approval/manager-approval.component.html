@@ -1,0 +1,71 @@
+<div style="text-align:center">
+  <h1>
+    Manager's Pending Details
+  </h1>
+</div>
+<table border="1" class="table" >
+<thead class="thead-dark">
+    <tbody class="empIdforTable">
+    <div *ngFor="let employee of empIdforTable()">
+    <th class="th1" scope="col">Employee Id</th>
+    <th class="th1" rowspan="1">{{employee}}</th>
+    <th class="th1" colspan="2">Employee Name</th>
+    <th class="th1" rowspan="3">{{findEmpName(employee)}}</th>
+    <th class="th1" colspan="3">Employee Leave Balance</th>
+    <th class="th1" rowspan="1">{{findEmpLeaveBalance(employee)}}</th>
+  
+    <!-- <tbody class="leavePending"> -->
+        <tr>
+          <th></th>
+        <th scope="col" >Leave Id</th>
+        <th colspan="1">Number of Days</th>
+        <th scope="col">Start Date </th>
+        <th scope="col">End Date </th>
+        <th scope="col">Leave Type</th>
+        <th scope="col">Leave Status</th>
+        <th scope="col">Leave Reason</th>
+        <th scope="col">Leave Applied Date</th>
+        <th scope="col">Manager Comments</th>
+        <th scope="col"> Option </th>
+      </tr>
+      
+  <tbody *ngFor="let employee1 of managerpending">
+      <tr  class="tr1" *ngIf="(employee == employee1.empId)">
+        <td></td>
+        <td>
+          <h5>{{employee1.leaveId}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.noOfDays}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.startDate}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.endDate}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.leaveType}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.leaveStatus}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.leaveReason}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.leaveAppliedDate}}</h5>
+        </td>
+        <td>
+          <h5>{{employee1.managerComments}}</h5>
+        </td>
+        <td> <button type="submit" class="btn btn-primary" (click)="onapprovedeny(employee1.leaveId,employee,findEmpManager(employee));">Approve/Deny</button>
+        </td>
+      </tr>
+    </div>
+  <div>
+      <br>
+          <button type="submit" class="btn btn-primary" (click)="onback()">Back</button>
+  </div>
+    
+  </tbody>

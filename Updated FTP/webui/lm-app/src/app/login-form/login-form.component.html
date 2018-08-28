@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Login</h2>
+    <form [formGroup]="userForm" role="form">
+      <div class="form-group">
+        <label for="empId">Employee Id</label>
+
+        <input type="text" #empId class="form-control" formControlName="empId" value=[empId] readonly required />
+        <div *ngIf="userForm.controls['empId'].hasError('minlength')" class="alert alert-danger">
+          Min length</div>
+        <div *ngIf="userForm.controls['empId'].hasError('maxlength')" class="alert alert-danger">
+          Max length</div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" (click)="onLogin()">Login</button>
+        <button type="submit" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+

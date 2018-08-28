@@ -1,0 +1,56 @@
+<div style="text-align:center">
+  <h1>
+    Employee Login
+  </h1>
+</div>
+<div>
+  <table border="1" class="table">
+    <thead class="blue-grey lighten-4">
+      <tr>
+        <th>Employee</th>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee DOB</th>
+        <th>Employee ManagerId</th>
+        <th>Employee Phone</th>
+        <th>Employee Department</th>
+        <th>Employee Email</th>
+        <th>Employee Leaves Available</th>
+      </tr>
+    </thead>
+    <tbody class="employees">
+      <tr *ngFor="let employee of employees">
+        <td>
+          <h5><img src="{{employee.empImage}}" style="width:90px;height:90px;border-radius:150px"></h5>
+        </td>
+        <td>
+          <h5>{{employee.empId}}</h5>
+        </td>
+        <td>
+          <h5>{{employee.empName}}</h5>
+        </td>
+        <td>
+          <h5>{{employee.empDate}}</h5>
+        </td>
+        <td>
+          <h5>{{employee.managerId}}</h5>
+        </td>
+        <td>
+          <h5>{{employee.empPhone}}</h5>
+        </td>
+        <td>
+          <h5>{{employee.empDept}}</h5>
+        </td>
+        <td>
+          <h5>{{employee.empEmail}}</h5>
+        </td>
+        <td>
+          <h5>{{employee.empLeaveAvailable}}</h5>
+        </td>
+        <td>
+          <button type="submit" class="btn btn-primary" (click)="onLogin(employee.empId)">Login</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

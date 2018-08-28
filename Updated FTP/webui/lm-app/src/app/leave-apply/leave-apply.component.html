@@ -1,0 +1,123 @@
+<!-- <div class="container">
+    <form class="form-horizontal" role="form">
+      <h2>Apply For Leave</h2>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Employee Id</label>
+        <div class="col-sm-9">
+            <input type="text"  placeholder={{employee.empId}} class="form-control" autofocus readonly>      </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-3 control-label" >Start Date</label>
+        <div class="col-sm-9">
+              <input type="date" class="form-control" name="startDate" [(ngModel)]="startDate">
+        </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-3 control-label" >End Date</label>
+        <div class="col-sm-9">
+            <input type="date" class="form-control" name="endDate" [(ngModel)]="endDate">
+            
+        </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-3 control-label" >Number of Days</label>
+        <div class="col-sm-9">
+            <input type="number" class="form-control" name="noOfDays" [(ngModel)]="noOfDays">
+            
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" >Leave Type</label>
+        <div class="col-sm-9">
+          <select  class="form-control" >
+            <option>Earned Leave</option>
+            <option>Optional Leave</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+              <label class="col-sm-3 control-label" >Leave Reason</label>
+              <div class="col-sm-9">
+                  <input type="text" class="form-control" name="leaveReason" [(ngModel)]="leaveReason"  >      </div>
+            </div>
+   
+      <div class="form-group">
+        <div class="col-sm-9 col-sm-offset-3">
+              <button class="btn btn-primary" (click)="onapplytest()">Apply</button>
+        </div>
+      </div>
+    </form>
+
+  </div> -->
+  <div class="container">
+      <form class="form-horizontal" role="form">
+        <legend><span class="number">></span> Apply For Leave</legend>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQpLP8nDtZAWLbUPAGnndgx_RL8VT732G48u9mwUkyu2qXVbEtcw" alt="HTML5 Icon" style="width:180px;height:130px;">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Employee Id</label>
+          <div class="col-sm-9">
+              <input type="text"  placeholder={{employeeId}} class="form-control" autofocus readonly>      </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Leave Balance</label>
+          <div class="col-sm-9">
+              <input type="text"  placeholder={{leaves}} class="form-control" autofocus readonly>      </div>
+        </div>
+        
+        <!-- <div class="form-group">
+            <label  class="col-sm-3 control-label" >Applying Date</label>
+            <div class="col-sm-9">
+                  <input type="date" class="form-control" name="curDate" [(ngModel)]="curDate" readonly>
+            </div>
+          </div> -->
+        <div class="form-group">
+          <label  class="col-sm-3 control-label" >Start Date</label>
+          <div class="col-sm-9">
+              
+                <input type="date" class="form-control" name="startDate" [(ngModel)]="startDate" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-3 control-label" >End Date</label>
+          <div class="col-sm-9">
+              <input type="date" class="form-control" name="endDate" [min]="startDate" [(ngModel)]="endDate">
+              
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-3 control-label" >No. Of Days</label>
+          <div class="col-sm-9">
+              <input type="number" class="form-control" name="noOfDays" (blur)="getDate(startDate,endDate)" [(ngModel)]="daydiff">
+              
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" >Leave Type</label>
+          <div class="col-sm-9">
+            <select [(ngModel)]="selectedOption" name="Option" class="form-control" >
+                <option *ngFor="let o of options">
+              {{o.Option}}
+            </option>
+            </select>
+  
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" >Leave Reason</label>
+           <div class="col-sm-9">
+             <input type="text" class="form-control" name="leaveReason" [(ngModel)]="leaveReason"  >
+              </div> 
+            </div>
+     
+        <!-- <div class="form-group">
+           <div class="col-sm-9 col-sm-offset-3"> --> 
+                <button class="btn-primary" (click)="onapply()">Apply</button>
+          
+          <!-- <div class="col-sm-9 col-sm-offset-3"> -->
+            <button class="btn-primary2" (click)="oncancel()">Cancel</button>
+          </form>
+      
+      </div>
+    

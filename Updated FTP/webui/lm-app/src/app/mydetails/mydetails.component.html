@@ -1,0 +1,56 @@
+<div style="text-align:center">
+  <h1>My Details</h1>
+</div>
+<form>
+  <div class="col-2">
+    <label>
+      Employee ID
+      <input class="empId" placeholder={{employeeId}} tabindex="1" />
+    </label>
+  </div>
+  <div class="col-2">
+    <label>
+      Employee Name
+      <input placeholder={{name}} tabindex="2" />
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Date of Joining
+      <input placeholder={{date}} tabindex="3" />
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Manager Id
+      <input placeholder={{manager}} tabindex="4" />
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Mobile no.
+      <input placeholder={{phone}} tabindex="5" />
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Employee Department
+      <input placeholder={{dept}} tabindex="6" />
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Employee Email
+      <input placeholder={{email}} tabindex="7" />
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Employee Leave Available
+      <input placeholder={{leaves}} tabindex="8" />
+    </label>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary" (click)="onback()">Back</button>
+  </div>
+</form>
